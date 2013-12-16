@@ -19,26 +19,26 @@ Library for implementing sliding menu drawer
     MenuDrawer mMenuDrawer = MenuDrawer.attach(this, MenuDrawer.MENU_DRAG_WINDOW,Position.RIGHT);
     
     //Layout of the page on which you have to add drawer
-		mMenuDrawer.setContentView(R.layout.page_layout);
+    mMenuDrawer.setContentView(R.layout.page_layout);
 		
-		//Layout of the drawer contents
-		mMenuDrawer.setMenuView(R.layout.drawer_layout);
-		
-		//Setting listener for drawer actions
-		mMenuDrawer.setOnDrawerStateChangeListener(new OnDrawerStateChangeListener() {
+	//Layout of the drawer contents
+	mMenuDrawer.setMenuView(R.layout.drawer_layout);
+	
+	//Setting listener for drawer actions
+	mMenuDrawer.setOnDrawerStateChangeListener(new OnDrawerStateChangeListener() {
 
-		  @Override
-		  public void onDrawerStateChange(int oldState, int newState) {
-			  if (newState == MenuDrawer.STATE_CLOSED) {
-				  // do something ...
-			  } else if (newState == MenuDrawer.STATE_OPENING || newState == MenuDrawer.STATE_DRAGGING
-					|| newState == MenuDrawer.STATE_OPEN) {
-				  // do something ...
-			  }
-		  }
-	  });
+	  @Override
+	  public void onDrawerStateChange(int oldState, int newState) {
+		  if (newState == MenuDrawer.STATE_CLOSED) {
+			  // do something ...
+	  	} else if (newState == MenuDrawer.STATE_OPENING || newState == MenuDrawer.STATE_DRAGGING
+				|| newState == MenuDrawer.STATE_OPEN) {
+			  // do something ...
+ 		  }
+	  }
+    });
 	  
-	  //Opening menu drawer on button click
+    //Opening menu drawer on button click
     mMenuDrawer.openMenu();
     
     //Closing menu drawer
